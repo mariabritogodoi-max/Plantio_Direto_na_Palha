@@ -1,0 +1,192 @@
+/* Variáveis de Cores */
+:root {
+    --green-dark: #2C5F2D;
+    --green-light: #97BC62;
+    --soil-brown: #5C4033;
+    --straw-yellow: #E6D5B8;
+    --bg-light: #F9F8F6;
+    --text-dark: #333333;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: white;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--green-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Header e Navegação */
+.header {
+    background-color: var(--green-dark);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    color: var(--straw-yellow);
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--straw-yellow);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 95, 45, 0.8), rgba(92, 64, 51, 0.8)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    color: var(--straw-yellow);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--green-light);
+    color: var(--green-dark);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--straw-yellow);
+}
+
+/* Seções Gerais */
+.section {
+    padding: 5rem 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Timeline História */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: auto;
+    border-left: 4px solid var(--green-light);
+    padding-left: 2rem;
+}
+
+.timeline-item h3 {
+    color: var(--soil-brown);
+    margin-bottom: 0.5rem;
+}
+
+/* Cards de Benefícios */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--bg-light);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    flex: 1 1 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--green-light);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--soil-brown);
+}
+
+/* Footer */
+footer {
+    background-color: var(--soil-brown);
+    color: var(--straw-yellow);
+    padding: 2rem 0;
+}
+
+/* Animações via JS */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
