@@ -23,7 +23,92 @@ body {
 }
 
 /* Header e Menu de Navegação */
-header {
+header <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantio Direto na Palha | O Pioneirismo Paranaense</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Plantio Direto</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#sobre">O que é</a></li>
+                    <li><a href="#historia">História no Paraná</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h2>A Revolução Silenciosa que Salvou o Solo</h2>
+            <p>Descubra como o Paraná foi pioneiro no Sistema de Plantio Direto, protegendo a terra contra a erosão e transformando a agricultura brasileira.</p>
+            <a href="#historia" class="btn">Conhecer a História</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="section container">
+        <div class="content text-center fade-in">
+            <h2>O que é o Plantio Direto na Palha?</h2>
+            <p>O Sistema de Plantio Direto (SPD) é uma técnica agrícola de conservação do solo que envolve a ausência de revolvimento da terra (sem arar ou gradear). A semente é colocada diretamente no solo, que permanece coberto pelos restos vegetais (palha) da colheita anterior. Essa cobertura atua como um "escudo" protetor.</p>
+        </div>
+    </section>
+
+    <section id="historia" class="section bg-light">
+        <div class="container fade-in">
+            <h2 class="text-center">O Pioneirismo Paranaense</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>1972 - O Início em Rolândia</h3>
+                    <p>Cansado de ver suas terras levadas pelas chuvas (erosão), o agricultor <strong>Herbert Bartz</strong> importou as primeiras máquinas e realizou o primeiro plantio direto comercial do Brasil em sua fazenda no norte do Paraná.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1976 - Expansão nos Campos Gerais</h3>
+                    <p>Na região de Ponta Grossa, pioneiros como <strong>Manoel Henrique Pereira</strong> (Nono Pereira) e <strong>Franke Dijkstra</strong> começaram a testar o sistema, adaptando-o para a realidade local e fundando o famoso "Clube da Minhoca" para trocar conhecimentos.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>O Sucesso e o Legado</h3>
+                    <p>O que começou com agricultores visionários no Paraná tornou-se a base da agricultura sustentável no Brasil. Pesquisadores do IAPAR (Instituto Agronômico do Paraná) e da Embrapa validaram cientificamente a prática, espalhando-a pelo país.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="section container fade-in">
+        <h2 class="text-center">Benefícios para o Meio Ambiente</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🛡️ Combate à Erosão</h3>
+                <p>A palha amortece o impacto das gotas de chuva, reduzindo a perda de terra e nutrientes em até 90%.</p>
+            </div>
+            <div class="card">
+                <h3>💧 Retenção de Água</h3>
+                <p>O solo coberto evapora menos, mantendo a umidade necessária para as plantas durante períodos de seca.</p>
+            </div>
+            <div class="card">
+                <h3>🌱 Sequestro de Carbono</h3>
+                <p>Aumenta a matéria orgânica no solo, ajudando a retirar CO2 da atmosfera e melhorando a biologia da terra (mais minhocas e microrganismos).</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 História do Plantio Direto. Um tributo aos pioneiros do Paraná.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>{
     background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
