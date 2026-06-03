@@ -1,40 +1,26 @@
+// Aguarda o carregamento do DOM para evitar erros
 document.addEventListener('DOMContentLoaded', () => {
-    // Scroll Suave para os links da navegação
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            window.scrollTo({
-                top: targetSection.offsetTop - 60, // Compensação do Header fixo
-                behavior: 'smooth'
-            });
-        });
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const menuLinks = document.querySelectorAll('.nav-menu a');
+
+    // Função para abrir/fechar o menu hambúrguer
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        
+        // Altera o ícone visual entre hambúrguer (☰) e fechar (X)
+        if (navMenu.classList.contains('active')) {
+            hamburger.innerHTML = '&times;'; // Ícone de fechar (X)
+        } else {
+            hamburger.innerHTML = '&#9776;'; // Ícone de hambúrguer (☰)
+        }
     });
 
-    // Animação de Fade-in ao rolar a página
-    const faders = document.querySelectorAll('.fade-in');
-
-    const appearOptions = {
-        threshold: 0.15, // O elemento aparece quando 15% dele estiver na tela
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Para a animação acontecer apenas uma vez
-            }
+    // Fecha o menu automaticamente ao clicar em qualquer link (melhora a experiência do usuário)
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger.innerHTML = '&#9776;';
         });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-        appearOnScroll.observe(fader);
     });
 });
